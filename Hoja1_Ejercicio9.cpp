@@ -46,6 +46,7 @@ int main()
 	}
 	cout << endl;
 	cout << "Hay " << c << " numeros capicuas" << endl;
+	delete n;
 	_getch();
 }
 
