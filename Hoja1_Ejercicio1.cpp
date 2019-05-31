@@ -9,6 +9,7 @@ int main()
 {
 	int *notas;
 	int numeroMayor = 21, numeroMenor = 0, k = 0;
+	double promedio = 0;
 	notas = new int[6];
 	for (int i = 0; i < 6; i++)
 	{
@@ -26,15 +27,19 @@ int main()
 			numeroMenor = notas[i];
 		}
 		numeroMayor = notas[i];
+		promedio = promedio + notas[i];
 	}
 	cout << endl;
 	cout << "La nota que no se considera es: " << numeroMenor << endl;
 	if (k > 0)
 	{
-		cout << "Solo se elimina un solo " << numeroMenor;
+		cout << "Solo se elimina un solo " << numeroMenor << endl;
 	}
+	promedio = (promedio - numeroMenor) / 5;
+	cout << "Promedio = " << promedio << endl;
 	delete notas;
 	_getch();
 }
+
 
 
